@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+    <html class="no-js"> <!--<![endif]-->
+    <head>
+        <title>js03_função.html - somatoria com entradad de dados por formulário</title>
+        <meta http-equiv='Content-Type' content="text/html; charset=iso-8859-1">
+        <meta http-equiv='Content-Type' content="text/html; charset=utf-8">
+        <meta charset="uft-8"/>
+    </head>
+
+    <body>
+
+        <h3>somatoria com entrada de dados por formulrio</h3>
+        <!--Definição da área de dos elementos do formulário-->
+        <form name="MeuFormulario" action=" " method="post">
+            Entre com o valor 1: <input type="text" name="f_n1"><p></p>
+            Entre com o valor 2: <input type="text" name="f_n2"><p></p>
+            <input type="button" name="btn_somar" value="Somar" onclick="soma()" />
+            <input type="reset" name="btn_apagar" value="Apagar" />
+        </form> 
+        <!--Fim do formulário-->
+        <!--Definição da linguagem javascript-->  
+        <script language="javascript">
+            /*Objetivo: Dsenvolver programa em javascript que faça a leitura de dois números inteiros 
+              Aplique a conversão de valores com parseint e apresente o resultado da soma entre eles           
+              Entrada de dados por formulário
+            */
+
+            /*Definição de variáveis*/
+
+            var js_n1;
+            var js_n2;
+            var js_soma;
+
+            /*Definição da funão soma() para capturar dados, processar somatória e apresentar o resultado*/
+            function soma() {
+                js_n1 = parseInt(document.MeuFormulario.f_n1.value);
+                js_n2 = parseInt(document.MeuFormulario.f_n2.value);
+
+                /*Processamento dos dados*/
+
+                js_soma = js_n1 + js_n2;
+                window.alert('Resultado da soma: ' +js_soma.toString());
+            }
+         /*Final do bloco java script*/   
+        </script>  
+      
+    </body>
+</html>
